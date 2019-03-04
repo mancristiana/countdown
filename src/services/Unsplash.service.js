@@ -24,6 +24,7 @@ export async function getRandomPhoto2(query) {
 export async function getRandomPhoto(query) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      console.log('this was called');
       resolve({
         color: '#CACEE3',
         urls: {

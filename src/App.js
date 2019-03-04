@@ -1,31 +1,33 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './App.css';
 
 import Counter from './Counter';
+import RandomImage from './RandomImage';
 
-import { getRandomPhoto } from './services/Unsplash.service';
-import { getDuration } from './services/Time.service';
+// import { getDuration } from './services/Time.service';
 import { getContrast } from './services/Color.service';
 
-class App extends Component {
+class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      image: '',
       color: '#fff',
-      duration: ''
+      duration: {
+        days: 6,
+        minutes: 15,
+        hours: 1,
+        seconds: 32
+      }
     };
   }
 
-  componentDidMount() {
-    getRandomPhoto('home').then(({ urls, color }) => {
-      this.setState({ image: urls.full, color });
-    });
-    this.setState({ duration: getDuration('2019-06-01', new Date()) });
-  }
+  setColor = color => {
+    this.setState(color);
+  };
 
   render() {
-    const { image, color, duration } = this.state;
+    console.log('RENDERING APP');
+    const { color, duration } = this.state;
     const headerStyle = {
       backgroundColor: `${color}7F`
     };
@@ -35,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header" style={headerStyle}>
-          <img src={image} className="App-image" alt="logo" />
+          <RandomImage setColor={color => console.log(color)} />
           <div className="App-text" style={textStyle}>
             <Counter {...duration} />
           </div>
