@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getRandomPhoto } from './Unsplash.service';
-import { getContrast } from './Color.service';
+import { getRandomPhoto } from './services/Unsplash.service';
+import { getContrast } from './services/Color.service';
 
 class App extends Component {
   constructor(props) {
