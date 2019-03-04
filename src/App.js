@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getRandomPhoto } from './Unsplash.service';
+import { getContrast } from './Color.service';
 
 class App extends Component {
   constructor(props) {
@@ -17,21 +18,13 @@ class App extends Component {
     });
   }
 
-  getContrast(hexcolor) {
-    const r = parseInt(hexcolor.substr(1, 2), 16);
-    const g = parseInt(hexcolor.substr(3, 2), 16);
-    const b = parseInt(hexcolor.substr(5, 2), 16);
-    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-    return yiq >= 128 ? 'black' : 'white';
-  }
-
   render() {
     const { image, color } = this.state;
     const headerStyle = {
       backgroundColor: `${color}7F`
     };
     const textStyle = {
-      color: this.getContrast(color)
+      color: getContrast(color)
     };
     return (
       <div className="App">
