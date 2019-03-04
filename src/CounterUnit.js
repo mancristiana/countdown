@@ -1,10 +1,10 @@
 import React from 'react';
 import './CounterUnit.css';
 
-const CounterUnit = ({ unit, value }) => (
+const CounterUnit = ({ unit, number }) => (
   <div className="CounterUnit">
-    <div className="units">{value}</div>
-    <div className="label">{unit}</div>
+    <div className="number">{number}</div>
+    <div className="unit">{unit}</div>
   </div>
 );
 
