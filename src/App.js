@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+
+import Counter from './Counter';
+
 import { getRandomPhoto } from './services/Unsplash.service';
+import { getDuration } from './services/Time.service';
 import { getContrast } from './services/Color.service';
 
 class App extends Component {
@@ -8,7 +12,8 @@ class App extends Component {
     super(props);
     this.state = {
       image: '',
-      color: '#000000'
+      color: '#fff',
+      duration: ''
     };
   }
 
@@ -16,10 +21,11 @@ class App extends Component {
     getRandomPhoto('home').then(({ urls, color }) => {
       this.setState({ image: urls.full, color });
     });
+    this.setState({ duration: getDuration('2019-06-01', new Date()) });
   }
 
   render() {
-    const { image, color } = this.state;
+    const { image, color, duration } = this.state;
     const headerStyle = {
       backgroundColor: `${color}7F`
     };
@@ -30,9 +36,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header" style={headerStyle}>
           <img src={image} className="App-image" alt="logo" />
-          <p className="App-text" style={textStyle}>
-            <span className="number">33</span>remaining until moving in.
-          </p>
+          <div className="App-text" style={textStyle}>
+            <Counter {...duration} />
+          </div>
         </header>
       </div>
     );

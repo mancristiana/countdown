@@ -1,0 +1,12 @@
+.Counter {
+  display: flex;
+}
+.units {
+  font-size: 200%;
+  width: 3em;
+  margin: 0 0.3em;
+}
+
+.label {
+  text-align: center;
+}
