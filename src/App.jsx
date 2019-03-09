@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './App.css';
 
 import Counter from './components/counter/Counter';
-import RandomImage from './RandomImage';
+import RandomImage from './components/randomImage/RandomImage';
 
 import { getContrast } from './shared/Color.service';
 
