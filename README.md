@@ -1,7 +1,7 @@
 # Countdown
-[https://mancristiana.github.io/countdown/](https://mancristiana.github.io/countdown/)
 ![screenshot](https://i.gyazo.com/43fc8c2336eb443591ddae6a91b8999e.jpg)
 
+See it here [https://mancristiana.github.io/countdown/](https://mancristiana.github.io/countdown/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
