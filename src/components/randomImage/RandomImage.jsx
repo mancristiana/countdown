@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './RandomImage.css';
 
-import { getRandomPhoto } from './shared/Unsplash.service';
+import { getRandomPhoto } from '../../shared/Unsplash.service';
 
 const RandomImage = ({ setColor }) => {
   const [image, setImage] = useState('');
