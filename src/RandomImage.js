@@ -7,12 +7,11 @@ const RandomImage = ({ setColor }) => {
   const [image, setImage] = useState('');
 
   useEffect(() => {
-    console.log('IMAGE', image);
     getRandomPhoto('home').then(({ urls, color }) => {
       setImage(urls.full);
       setColor(color);
     });
-  }, [image]);
+  }, []);
 
   return <img src={image} className="RandomImage" alt="logo" />;
 };
