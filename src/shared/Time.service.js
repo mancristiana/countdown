@@ -7,14 +7,18 @@ export const Units = {
   Seconds: 'seconds'
 };
 
-export function getDuration(date1, date2) {
-  const moment1 = moment(date1);
-  const moment2 = moment(date2);
-  let duration = moment.duration(moment1.diff(moment2));
+export function getDuration(startDate, endDate) {
+  const startMoment = moment(startDate);
+  const endMoment = moment(endDate);
+  let duration = moment.duration(endMoment.diff(startMoment));
   return {
     seconds: duration.seconds(),
     minutes: duration.minutes(),
     hours: duration.hours(),
     days: Math.floor(duration.asDays())
   };
+}
+
+export function getNow() {
+  return moment();
 }

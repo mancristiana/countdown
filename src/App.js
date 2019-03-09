@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import './App.css';
 
-import Counter from './Counter';
+import Counter from './components/counter/Counter';
 import RandomImage from './RandomImage';
 
 import { getContrast } from './shared/Color.service';
@@ -10,13 +10,7 @@ class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      color: '#fff',
-      duration: {
-        days: 6,
-        minutes: 15,
-        hours: 1,
-        seconds: 32
-      }
+      color: '#fff'
     };
   }
 
@@ -26,7 +20,7 @@ class App extends PureComponent {
 
   render() {
     console.log('RENDERING APP');
-    const { color, duration } = this.state;
+    const { color } = this.state;
     const headerStyle = {
       backgroundColor: `${color}7F`
     };
@@ -38,7 +32,7 @@ class App extends PureComponent {
         <header className="App-header" style={headerStyle}>
           <RandomImage setColor={color => console.log(color)} />
           <div className="App-text" style={textStyle}>
-            <Counter {...duration} />
+            <Counter endDate={'2019-06-01'} />
           </div>
         </header>
       </div>

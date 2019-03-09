@@ -1,10 +1,10 @@
 import React from 'react';
-import './Counter.css';
+import './CounterDisplay.css';
 import CounterUnit from './CounterUnit';
-import { Units } from './shared/Time.service';
+import { Units } from './../../shared/Time.service';
 
-const Counter = ({ days, hours, minutes, seconds }) => (
-  <div className="Counter">
+const CounterDisplay = ({ days, hours, minutes, seconds }) => (
+  <div className="CounterDisplay">
     <CounterUnit unit={Units.Days} number={days} />
     <CounterUnit unit={Units.Hours} number={hours} />
     <CounterUnit unit={Units.Minutes} number={minutes} />
@@ -12,4 +12,4 @@ const Counter = ({ days, hours, minutes, seconds }) => (
   </div>
 );
 
-export default Counter;
+export default CounterDisplay;
