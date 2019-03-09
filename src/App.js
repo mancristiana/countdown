@@ -4,8 +4,7 @@ import './App.css';
 import Counter from './Counter';
 import RandomImage from './RandomImage';
 
-// import { getDuration } from './services/Time.service';
-import { getContrast } from './services/Color.service';
+import { getContrast } from './shared/Color.service';
 
 class App extends PureComponent {
   constructor(props) {

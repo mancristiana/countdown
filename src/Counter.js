@@ -1,7 +1,7 @@
 import React from 'react';
 import './Counter.css';
 import CounterUnit from './CounterUnit';
-import { Units } from './services/Time.service';
+import { Units } from './shared/Time.service';
 
 const Counter = ({ days, hours, minutes, seconds }) => (
   <div className="Counter">
