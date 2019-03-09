@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import './RandomImage.css';
+import styles from './RandomImage.module.css';
 
 import { getRandomPhoto } from '../../shared/Unsplash.service';
 import { ColorContext } from '../../shared/Color.context';
@@ -14,7 +14,7 @@ const RandomImage = () => {
     });
   }, []);
 
-  return <img src={image} className="RandomImage" alt="logo" />;
+  return <img src={image} className={styles.image} alt="logo" />;
 };
 
 export default RandomImage;

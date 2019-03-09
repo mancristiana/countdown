@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './CounterUnit.css';
+import styles from './CounterUnit.module.css';
 import { getContrast } from '../../shared/Color.service';
 import { ColorContext } from '../../shared/Color.context';
 
@@ -10,9 +10,9 @@ const CounterUnit = ({ unit, number }) => {
     color: getContrast(color)
   };
   return (
-    <div className="CounterUnit" style={style}>
-      <div className="number">{number}</div>
-      <div className="unit">{unit}</div>
+    <div className={styles.container} style={style}>
+      <div className={styles.number}>{number}</div>
+      <div className={styles.unit}>{unit}</div>
     </div>
   );
 };
