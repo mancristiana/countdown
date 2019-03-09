@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,11 +7,7 @@
   justify-content: center;
 }
 
-.App-text {
+.App-counter {
   font-size: calc(10px + 2vmin);
   padding: 1em 2em;
-}
-
-.App-text .number {
-  font-size: 150%;
 }
