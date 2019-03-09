@@ -7,6 +7,10 @@ export const Units = {
   Seconds: 'seconds'
 };
 
+export function getNow() {
+  return moment();
+}
+
 export function getDuration(startDate, endDate) {
   const startMoment = moment(startDate);
   const endMoment = moment(endDate);
@@ -19,6 +23,6 @@ export function getDuration(startDate, endDate) {
   };
 }
 
-export function getNow() {
-  return moment();
+export function getDurationFromNow(endDate) {
+  return getDuration(getNow(), endDate);
 }
