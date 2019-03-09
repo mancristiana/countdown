@@ -3,6 +3,7 @@ import styles from './App.module.css';
 
 import Counter from './components/counter/Counter';
 import RandomImage from './components/randomImage/RandomImage';
+import Header from './components/header/Header';
 
 import { ColorContext } from './shared/Color.context';
 
@@ -13,6 +14,7 @@ const App = () => {
       <ColorContext.Provider value={{ color, setColor }}>
         <RandomImage />
         <div className={styles.counter}>
+          <Header>Moving in</Header>
           <Counter endDate={'2019-06-01'} />
         </div>
       </ColorContext.Provider>
