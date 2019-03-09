@@ -7,8 +7,6 @@ import { ColorContext } from '../../shared/Color.context';
 const RandomImage = () => {
   const [image, setImage] = useState('');
   const { setColor } = useContext(ColorContext);
-  console.log('ColorContext', ColorContext);
-
   useEffect(() => {
     getRandomPhoto('home').then(({ urls, color }) => {
       setImage(urls.full);

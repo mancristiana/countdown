@@ -6,7 +6,7 @@ import { ColorContext } from '../../shared/Color.context';
 const CounterUnit = ({ unit, number }) => {
   const { color } = useContext(ColorContext);
   const style = {
-    background: `${color}80`,
+    background: color,
     color: getContrast(color)
   };
   return (
