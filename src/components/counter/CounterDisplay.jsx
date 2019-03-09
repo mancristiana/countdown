@@ -1,7 +1,7 @@
 import React from 'react';
 import './CounterDisplay.css';
 import CounterUnit from './CounterUnit';
-import { Units } from './../../shared/Time.service';
+import { Units } from '../../shared/Time.service';
 
 const CounterDisplay = ({ days, hours, minutes, seconds }) => (
   <div className="CounterDisplay">
