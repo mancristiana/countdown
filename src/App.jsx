@@ -4,14 +4,18 @@ import './App.css';
 import Counter from './components/counter/Counter';
 import RandomImage from './components/randomImage/RandomImage';
 
+import { ColorContext } from './shared/Color.context';
+
 const App = () => {
   const [color, setColor] = useState('#fff');
   return (
     <div className="App">
-      <RandomImage setColor={color => setColor(color)} />
-      <div className="App-counter">
-        <Counter endDate={'2019-06-01'} color={color} />
-      </div>
+      <ColorContext.Provider value={{ color, setColor }}>
+        <RandomImage />
+        <div className="App-counter">
+          <Counter endDate={'2019-06-01'} />
+        </div>
+      </ColorContext.Provider>
     </div>
   );
 };
