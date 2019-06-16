@@ -14,8 +14,8 @@ const App = () => {
       <ColorContext.Provider value={{ color, setColor }}>
         <RandomImage />
         <div className={styles.counter}>
-          <Header>Moving in</Header>
-          <Counter endDate={'2019-06-01'} />
+          <Header>Christmas in</Header>
+          <Counter endDate={'2019-12-24'} />
         </div>
       </ColorContext.Provider>
     </div>
