@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://mancristiana.github.io/countdown",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "moment": "^2.24.0",
     "react": "^16.8.3",
     "react-animated-number": "^0.4.4",
